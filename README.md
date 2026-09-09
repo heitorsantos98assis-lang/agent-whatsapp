@@ -97,7 +97,7 @@ GANHO REALIZADO     R$ 25.000  (10 fechamentos)
 
 - **Conta Zappfy** com instância conectada (token UUID).
 - **Python 3.8+** (zero dependências externas — só stdlib).
-- **Claude Code** logado (recomendado, mas opcional — todos comandos rodam via CLI puro).
+- **Codex** logado (recomendado, mas opcional — todos comandos rodam via CLI puro).
 - (Opcional) Conta **Calendly** ou Cal.com pra agendamento automático.
 
 ## Instalação rápida
@@ -118,12 +118,12 @@ python3 disparo.py listar --csv-out grupos.csv
 # 4. Inicializar SQLite (auto na primeira execução, mas pode forçar)
 python3 -c "from db import init_db; init_db(); print('DB OK')"
 
-# 5. Instalar agente Claude Code
-mkdir -p .claude/agents && cp whatsapp-zappfy-grupos.md .claude/agents/
-# /exit + reabra Claude Code
+# 5. Instalar agente Codex
+mkdir -p .codex/agents && cp whatsapp-zappfy-grupos.md .codex/agents/
+# /exit + reabra Codex
 ```
 
-## Uso via Claude Code (linguagem natural)
+## Uso via Codex (linguagem natural)
 
 ```
 > lista grupos
@@ -147,7 +147,7 @@ mkdir -p .claude/agents && cp whatsapp-zappfy-grupos.md .claude/agents/
 - **SQLite local** (`data.db`) com 7 tabelas: `leads`, `touches`, `inbox`, `conversations`, `followup_jobs`, `pipeline_events`, `campaigns`. Schema versionado.
 - **Camada de proteção**: jitter ±20%, retry 3x backoff exponencial, blacklist persistente cross-canal, dedup cross-grupo, health-check obrigatório >50 destinos, validação E.164 BR com DDDs válidos, hash SHA-256 dos números.
 - **Logs estruturados** (`timestamp|number|kind|status|err`) auditáveis pra LGPD.
-- **Claude Code agent** que mapeia linguagem natural → comando CLI exato.
+- **Codex agent** que mapeia linguagem natural → comando CLI exato.
 
 ## Limites operacionais (decoradinho)
 
@@ -217,7 +217,7 @@ Sem ML, sem dependência externa — regex + heurística. Self-test: `python3 in
 
 ```
 whatsapp-zappfy-grupos/
-├── whatsapp-zappfy-grupos.md   # agente Claude Code (21 capacidades)
+├── whatsapp-zappfy-grupos.md   # agente Codex (21 capacidades)
 ├── disparo.py                   # core: listar/preview/teste/broadcast/x1/retry/agendar
 ├── extrair_leads.py             # exporta + importa + dedup + E.164 + SHA-256
 ├── segmentar_leads.py           # filtro por DDD/grupos/admin/blacklist/nome
@@ -253,7 +253,7 @@ whatsapp-zappfy-grupos/
 | Qualificação BANT via WhatsApp | ❌ | ❌ | ✅ |
 | Enrich externo (Sheets/JSON) | ❌ | ⚠️ enterprise | ✅ |
 | Fetch HTML pra contextualizar | ❌ | ❌ | ✅ |
-| Linguagem natural via Claude Code | ❌ | ❌ | ✅ |
+| Linguagem natural via Codex | ❌ | ❌ | ✅ |
 | Custo mensal | R$ 0 | R$ 800-2.500 | R$ 0 |
 | Self-host / dados próprios | ✅ | ❌ | ✅ |
 

@@ -310,7 +310,7 @@ python3 disparo.py x1 \
   --delay 75 --jitter 0.2 --retry 3
 ```
 
-Ou via Claude Code: `> x1: oi {{first_name}}, tudo bem? aqui é a [seu nome]...`
+Ou via Codex: `> x1: oi {{first_name}}, tudo bem? aqui é a [seu nome]...`
 
 ### Regras anti-ban x1
 

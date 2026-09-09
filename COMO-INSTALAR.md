@@ -6,7 +6,7 @@ Passo a passo do zero ao primeiro disparo seguro com relatório executivo.
 
 - Conta Zappfy ativa com **instância criada e conectada via QR Code**. Pegue o **token (UUID)** no painel Zappfy.
 - **Python 3.8+** instalado (`python3 --version`).
-- **Claude Code** instalado e logado: <https://docs.claude.com/claude-code>.
+- **Codex** instalado e logado: <https://docs.Codex.com/Codex-code>.
 - Terminal com `unzip` (se recebeu o pacote como zip).
 
 ## 2. Descompactar e abrir
@@ -94,21 +94,21 @@ python3 disparo.py teste --text-file copy_teste.txt
 # Se chegou no seu WhatsApp, está tudo OK
 ```
 
-## 8. Instalar agente Claude Code
+## 8. Instalar agente Codex
 
 ### Opção A — só no projeto atual (recomendado)
 ```bash
-mkdir -p .claude/agents
-cp whatsapp-zappfy-grupos.md .claude/agents/
+mkdir -p .codex/agents
+cp whatsapp-zappfy-grupos.md .codex/agents/
 ```
 
 ### Opção B — global
 ```bash
-mkdir -p ~/.claude/agents
-cp whatsapp-zappfy-grupos.md ~/.claude/agents/
+mkdir -p .codex/agents/
+cp whatsapp-zappfy-grupos.md .codex/agents/
 ```
 
-### Reiniciar Claude Code
+### Reiniciar Codex
 
 Saia com `/exit`, abra de novo na pasta. Confirme:
 ```
@@ -117,7 +117,7 @@ Saia com `/exit`, abra de novo na pasta. Confirme:
 
 Deve aparecer `whatsapp-zappfy-grupos`.
 
-## 9. Primeiro disparo via Claude Code
+## 9. Primeiro disparo via Codex
 
 ```
 > dispara: aqui vai a copy real com emojis 🔥 e link https://exemplo.com
@@ -169,7 +169,7 @@ python3 disparo.py x1 --contatos contatos.csv --text-file copy_x1.txt \
   --confirmed-test --delay 75 --jitter 0.2 --retry 3
 ```
 
-Ou via Claude Code:
+Ou via Codex:
 ```
 > x1: oi {{first_name}}, tudo bem? aqui é a [seu nome]...
 ```
@@ -216,7 +216,7 @@ python3 extrair_leads.py importar --input lista_externa.csv --merge ./leads_$(da
 
 ## 13. Relatório executivo
 
-Após cada broadcast, o agente Claude Code já gera. Manualmente:
+Após cada broadcast, o agente Codex já gera. Manualmente:
 
 ```bash
 # Disparo único
