@@ -2,7 +2,7 @@
 
 **CRM operacional via WhatsApp.** Não é disparador. É o canal comercial inteiro: dispara, recebe, classifica intenção, qualifica BANT, dispara follow-up multi-toque, gerencia pipeline 7 estágios, calcula forecast ponderado, audita abandonados, enriquece com contexto externo, gera relatório executivo. Tudo persistido em SQLite local — auditável 6 meses depois.
 
-> Produto **Bravy / ASV Digital** — uso comercial liberado pra clientes ASV.
+> Produto **HL** — uso comercial liberado pra clientes HL.
 
 ## Para quem é
 
@@ -259,9 +259,9 @@ whatsapp-zappfy-grupos/
 
 ## Suporte
 
-- Email: produtos@asv.digital
-- Pacote completo Bravy / ASV Digital — 56+ agentes operacionais.
+- Email: produtos@HL.digital
+- Pacote completo HL — 56+ agentes operacionais.
 
 ## Licença
 
-Uso permitido pra clientes ASV Digital / Bravy. Não redistribuir.
+Uso permitido pra clientes HL. Não redistribuir.
